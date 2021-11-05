@@ -1,5 +1,3 @@
-/* TODO: add in our DB */
+DROP DATABASE IF EXISTS checkmate_db;
 
-DROP DATABASE IF EXISTS museum_db;
-
-CREATE DATABASE museum_db;
+CREATE DATABASE checkmate_db;
