@@ -3,7 +3,7 @@ const { Project, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 //TODO: replace with our own info
-router.get('/', async (req, res) => {
+router.get('/user', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
     const projectData = await Project.findAll({
@@ -70,14 +70,18 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
-router.get('/login', (req, res) => {
+router.get('/', (req, res) => {
   // If the user is already logged in, redirect the request to another route
-  if (req.session.logged_in) {
-    res.redirect('/profile');
-    return;
-  }
+  //   if (req.session.logged_in) {
+  //     res.redirect('/profile');
+  //     return;
+  //   }
 
   res.render('login');
+});
+
+router.get('/overview', async (req, res) => {
+  res.render('homepage');
 });
 
 module.exports = router;
