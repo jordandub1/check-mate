@@ -1,7 +1,4 @@
 const router = require('express').Router();
-const {
-  Product,
-} = require('../../../../../13-orm/homework/E-Commerce-Back-End/Develop/models');
 const { Category, Expenses } = require('../../models');
 
 router.get('/', async (req, res) => {
@@ -92,4 +89,4 @@ router.delete('/:id', async (req, res) => {
     }
 });
 
-module.exports = categories
+module.exports = router
