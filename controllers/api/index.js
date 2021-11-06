@@ -12,5 +12,10 @@ router.use('/budget', budgetRoutes);
 const path = require('path');
 
 // router.use('/users', userRoutes);
+// router.use('/budget', budgetRoutes);
+
+const path = require('path');
+
+router.use('/users', userRoutes);
 
 module.exports = router;
