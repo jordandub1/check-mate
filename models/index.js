@@ -1,4 +1,4 @@
-//TODO: customize
+//TODO: customize project section
 const User = require('./User');
 const Project = require('./Project');
 
