@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Project, User } = require('../models');
 const withAuth = require('../utils/auth');
 
+//TODO: replace with our own info
 router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
