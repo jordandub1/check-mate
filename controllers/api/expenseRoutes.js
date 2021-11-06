@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const { Expense, Category, Budget } = require('../../models');
 
+
+// Get all expenses
 router.get('/', async (req, res) => {
   try {
     const expenseData = await Expense.findAll();
@@ -10,6 +12,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+// Get one expense
 router.get('/:id', async (req, res) => {
     try {
         const expenseData = await Expense.findByPk(req.params.id, {
@@ -31,4 +34,8 @@ router.get('/:id', async (req, res) => {
     }   catch (err) {
         res.status(500).json(err);
     }
-})
+});
+
+
+
+module.exports = router;
