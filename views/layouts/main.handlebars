@@ -1,0 +1,83 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Check-Mate</title>
+  <link rel="stylesheet" href="project-demo.css" />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  />
+  <link
+    href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <header>
+    <!-- Top Bar -->
+    <nav class="navbar navbar-dark bg-primary fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="chess.png"
+            alt="Chess Icon"
+            width="30"
+            height="24"
+            class="d-inline-block align-text-top"
+          />
+          Check-Mate
+        </a>
+        <!-- Toggle button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#sidebarMenu"
+          aria-controls="sidebarMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+    <!-- Sidebar -->
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+      <div class="position-sticky">
+        <div class="list-group list-group-flush mx-3 mt-4">
+          <a
+            href="#"
+            class="list-group-item list-group-item-action py-2 ripple active"
+          >
+            <i class="fa fa-tachometer" aria-hidden="true"></i>
+            <span>Overview</span>
+          </a>
+          <a
+            href="#"
+            class="list-group-item list-group-item-action py-2 ripple"
+          >
+            <i class="fa fa-usd" aria-hidden="true"></i>
+            <span>Edit Budget</span>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"
+            ><i class="fa fa-plus" aria-hidden="true"></i>
+            <span>Add Income</span></a
+          >
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"
+            ><i class="fa fa-plus" aria-hidden="true"></i>
+            <span>Add Expenses</span></a
+          >
+          <a href="#" class="sidebar-footer py-2 ripple"
+            ><i class="fa fa-cog fa-fw me-3"></i> <span>Settings</span></a
+          >
+        </div>
+      </div>
+    </nav>
+  </header>
+  {{{body}}}
+</body>
+</main>
+<footer class="footer fixed-bottom bg-primary">
+  <p id="footer-text">©2021 Check-Mate. All Rights Reserved</p>
+</footer>
