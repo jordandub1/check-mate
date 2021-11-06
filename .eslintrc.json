@@ -5,11 +5,10 @@
     "commonjs": true,
     "node": true,
     "es6": true,
-    // Add support for ES7 features like ** operators
-    "es2017": true
+    "es2017": true,
+    "es2018": true
   },
   "rules": {
-    // Don't allow assigning variables to undefined
     "no-undef-init": "error",
     "no-duplicate-case": "error",
     "no-empty": "error",
@@ -31,8 +30,9 @@
     "no-redeclare": "error",
     "brace-style": "error",
     "indent": ["error", 2],
-    "quotes": ["error", "double"],
+    "quotes": ["error", "single"],
     "semi": ["error", "always"],
     "radix": "off"
-  }
+  },
+  "extends": ["prettier"]
 }
