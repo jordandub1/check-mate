@@ -7,14 +7,10 @@ const budgetRoutes = require('../../controllers/api/budgetRoutes');
 router.use('/user', userRoutes);
 router.use('/expense', expenseRoutes);
 router.use('/category', categoryRoutes);
-router.use('/budget', budgetRoutes);
-
-const path = require('path');
+// router.use('/budget', budgetRoutes);
 
 // router.use('/users', userRoutes);
 // router.use('/budget', budgetRoutes);
-
-const path = require('path');
 
 router.use('/users', userRoutes);
 

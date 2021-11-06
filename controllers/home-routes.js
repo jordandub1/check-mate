@@ -5,7 +5,7 @@ const withAuth = require('../utils/auth');
 //TODO: replace with our own info
 // router.get('/user', async (req, res) => {
 //TODO: customize
-router.get('/', async (req, res) => {
+router.get('/user', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
     const projectData = await Project.findAll({
@@ -78,7 +78,6 @@ router.get('/', (req, res) => {
   //     res.redirect('/profile');
   //     return;
   //   }
-
   res.render('login');
 });
 
