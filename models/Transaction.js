@@ -13,7 +13,11 @@ Transaction.init(
       autoIncrement: true,
     },
     user_id {
-        //TODO: I need to know how to do foreign key for this one
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'user',
+            key: 'id',
+        },
     },
     tran_name: {
       type: DataTypes.STRING,
@@ -23,9 +27,13 @@ Transaction.init(
       type: DataTypes.DECIMAL,
       allowNull: false,
     },
-    catagory: {
-      type: DataTypes.STRING,
+    category: {
+      type: DataTypes.INTEGER,
       allowNull: false,
+      references: {
+          model: 'category',
+          key: 'id',
+      },
     },
     is_expense: {
       type: DataTypes.BOOLEAN,
