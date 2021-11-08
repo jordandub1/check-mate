@@ -38,6 +38,10 @@ Budget.init(
       type: DataTypes.DATE,
       allowNull: true,
     },
+    transaction_list: {
+        type: DataTypes.ARRAY,
+        allowNull: true,
+    }
   },
   {
     sequelize,
