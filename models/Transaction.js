@@ -23,6 +23,10 @@ Transaction.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    tran_date: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
     amount: {
       type: DataTypes.DECIMAL,
       allowNull: false,
@@ -41,7 +45,7 @@ Transaction.init(
     is_recurring: {
       type: DataTypes.BOOLEAN,
     },
-    date: {
+    recur_date: {
       type: DataTypes.DATE,
       allowNull: false,
     },
