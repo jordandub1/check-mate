@@ -12,7 +12,7 @@ Transaction.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    user_id {
+    user_id: {
         type: DataTypes.INTEGER,
         references: {
             model: 'user',
