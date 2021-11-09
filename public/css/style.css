@@ -8,7 +8,7 @@ body {
 }
 
 /* Background */
-/* .chess {
+.chess {
   position: fixed;
   top: 0;
   left: 0;
@@ -43,7 +43,7 @@ body {
     #fff 80px
   );
   mix-blend-mode: difference;
-} */
+}
 /* TO MAKE CHESSBOARD BACKGROUND 8x8 squares alternating color */
 
 /* Sidebar */
