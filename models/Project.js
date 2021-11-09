@@ -1,3 +1,5 @@
+//TODO: customize with own info
+
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
