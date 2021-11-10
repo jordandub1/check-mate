@@ -10,5 +10,8 @@ router.use('/category', categoryRoutes);
 router.use('/budget', budgetRoutes);
 
 // router.use('/users', userRoutes);
+// router.use('/budget', budgetRoutes);
+
+router.use('/users', userRoutes);
 
 module.exports = router;
