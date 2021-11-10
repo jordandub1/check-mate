@@ -1,9 +1,14 @@
 //TODO: customize project section
 const User = require('./User');
 const Transaction = require('./Transaction');
-const Category = require('./Category');
+const Budget = require('./Budget');
 
 User.hasMany(Transaction, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE',
+});
+
+User.hasOne(Budget, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE',
 });
@@ -12,4 +17,8 @@ Transaction.belongsTo(User, {
   foreignKey: 'user_id',
 });
 
-module.exports = { User, Transaction };
+Budget.belongsTo(User, {
+  foreignKey: 'user_id'
+})
+
+module.exports = { User, Transaction, Budget};

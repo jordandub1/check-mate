@@ -37,10 +37,6 @@ Budget.init(
     savings_date: {
       type: DataTypes.DATE,
       allowNull: true,
-    },
-    transaction_list: {
-        type: DataTypes.ARRAY,
-        allowNull: true,
     }
   },
   {
@@ -51,3 +47,5 @@ Budget.init(
     modelName: 'budget',
   }
 );
+
+module.exports = Budget;

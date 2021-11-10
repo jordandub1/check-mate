@@ -34,10 +34,6 @@ Transaction.init(
     category: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      references: {
-          model: 'category',
-          key: 'id',
-      },
     },
     is_expense: {
       type: DataTypes.BOOLEAN,
