@@ -5,8 +5,7 @@ const userData = require('./userData.json');
 const projectData = require('./projectData.json');
 const cataData = require('./categoryData_jdp.json');
 const transactData = require('./transactionData_jdp.json');
-const budgetData = require('./budgetData_jdp.json')
-
+const budgetData = require('./budgetData_jdp.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -27,9 +26,8 @@ const seedDatabase = async () => {
   });
   const transactions = await Transaction.bulkCreate(transactData, {
     individualHooks: true,
-    returning: true, 
-  })
-
+    returning: true,
+  });
 
   for (const project of projectData) {
     await Project.create({
