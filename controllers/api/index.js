@@ -9,12 +9,9 @@ router.use('/expense', expenseRoutes);
 router.use('/category', categoryRoutes);
 // router.use('/budget', budgetRoutes);
 
-<<<<<<< HEAD
 // router.use('/users', userRoutes);
 // router.use('/budget', budgetRoutes);
 
-=======
->>>>>>> 206141dfdf8fa298b4f0a44601bf89b37bf666d9
 router.use('/users', userRoutes);
 
 module.exports = router;
