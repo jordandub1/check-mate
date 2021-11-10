@@ -96,3 +96,10 @@ body {
   margin-right: 0px;
   margin-left: -15px;
 }
+
+/* Sign Up */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #007bff;
+  text-align: center;
+}
