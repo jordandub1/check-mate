@@ -1,10 +1,9 @@
-//Add following for Transaction Model: id, transaction_name, transaction_amount, date_of_transaction, category (foreign key for category table), notes(?)git stat
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Category extends Model {}
+class Categories extends Model {}
 
-Category.init(
+Categories.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -12,7 +11,7 @@ Category.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    catagory_name: {
+    categories_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -22,8 +21,8 @@ Category.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'category',
+    modelName: 'categories',
   }
 );
 
-module.exports = Category;
+module.exports = Categories;
