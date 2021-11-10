@@ -1,0 +1,233 @@
+[
+    {
+        "user_id": 1,
+        "tran_name": "Rent",
+        "tran_date": "12/01/2021",
+        "amount": 1000.00,
+        "category": "Utilities",
+        "is_expense": true,
+        "is_recurring": true,
+        "recur_date": "01/01/2022",
+        "notes": "Going Up 100$ Starting This Month"
+    },
+    {
+        "user_id": 1,
+        "tran_name": "Electric",
+        "tran_date": "11/30/2021",
+        "amount": 125.00,
+        "category": "Utilities",
+        "is_expense": true,
+        "is_recurring": true,
+        "recur_date": "12/30/2022",
+        "notes": "Turn off your lights next time"
+    },
+    {
+        "user_id": 1,
+        "tran_name": "Car Payment",
+        "tran_date": "12/05/2021",
+        "amount": 300.00,
+        "category": "Automotive",
+        "is_expense": true,
+        "is_recurring": true,
+        "recur_date": "01/05/2022",
+        "notes": "One More Year Remaining"
+    },
+    {
+        "user_id": 1,
+        "tran_name": "Health Insurance",
+        "tran_date": "12/01/2021",
+        "amount": 250.00,
+        "category": "Healthcare",
+        "is_expense": true,
+        "is_recurring": true,
+        "recur_date": "03/01/2022",
+        "notes": "Sign Up for New Insurance"
+    },
+    {
+        "user_id": 2,
+        "tran_name": "Rent",
+        "tran_date": "12/01/2021",
+        "amount": 1000.00,
+        "category": "Utilities",
+        "is_expense": true,
+        "is_recurring": true,
+        "recur_date": "01/01/2022",
+        "notes": "Going Up 100$ Starting This Month"
+    },
+    {
+        "user_id": 2,
+        "tran_name": "Electric",
+        "tran_date": "11/30/2021",
+        "amount": 125.00,
+        "category": "Utilities",
+        "is_expense": true,
+        "is_recurring": true,
+        "recur_date": "12/30/2022",
+        "notes": "Turn off your lights next time"
+    },
+    {
+        "user_id": 2,
+        "tran_name": "Car Payment",
+        "tran_date": "12/05/2021",
+        "amount": 300.00,
+        "category": "Automotive",
+        "is_expense": true,
+        "is_recurring": true,
+        "recur_date": "01/05/2022",
+        "notes": "One More Year Remaining"
+    },
+    {
+        "user_id": 2,
+        "tran_name": "Health Insurance",
+        "tran_date": "12/01/2021",
+        "amount": 250.00,
+        "category": "Healthcare",
+        "is_expense": true,
+        "is_recurring": true,
+        "recur_date": "03/01/2022",
+        "notes": "Sign Up for New Insurance"
+    },
+    {
+        "user_id": 3,
+        "tran_name": "Rent",
+        "tran_date": "12/01/2021",
+        "amount": 1000.00,
+        "category": "Utilities",
+        "is_expense": true,
+        "is_recurring": true,
+        "recur_date": "01/01/2022",
+        "notes": "Going Up 100$ Starting This Month"
+    },
+    {
+        "user_id": 3,
+        "tran_name": "Electric",
+        "tran_date": "11/30/2021",
+        "amount": 125.00,
+        "category": "Utilities",
+        "is_expense": true,
+        "is_recurring": true,
+        "recur_date": "12/30/2022",
+        "notes": "Turn off your lights next time"
+    },
+    {
+        "user_id": 3,
+        "tran_name": "Car Payment",
+        "tran_date": "12/05/2021",
+        "amount": 300.00,
+        "category": "Automotive",
+        "is_expense": true,
+        "is_recurring": true,
+        "recur_date": "01/05/2022",
+        "notes": "One More Year Remaining"
+    },
+    {
+        "user_id": 3,
+        "tran_name": "Health Insurance",
+        "tran_date": "12/01/2021",
+        "amount": 250.00,
+        "category": "Healthcare",
+        "is_expense": true,
+        "is_recurring": true,
+        "recur_date": "03/01/2022",
+        "notes": "Sign Up for New Insurance"
+    },
+    {
+        "user_id": 4,
+        "tran_name": "Rent",
+        "tran_date": "12/01/2021",
+        "amount": 1000.00,
+        "category": "Utilities",
+        "is_expense": true,
+        "is_recurring": true,
+        "recur_date": "01/01/2022",
+        "notes": "Going Up 100$ Starting This Month"
+    },
+    {
+        "user_id": 4,
+        "tran_name": "Electric",
+        "tran_date": "11/30/2021",
+        "amount": 125.00,
+        "category": "Utilities",
+        "is_expense": true,
+        "is_recurring": true,
+        "recur_date": "12/30/2022",
+        "notes": "Turn off your lights next time"
+    },
+    {
+        "user_id": 4,
+        "tran_name": "Car Payment",
+        "tran_date": "12/05/2021",
+        "amount": 300.00,
+        "category": "Automotive",
+        "is_expense": true,
+        "is_recurring": true,
+        "recur_date": "01/05/2022",
+        "notes": "One More Year Remaining"
+    },
+    {
+        "user_id": 4,
+        "tran_name": "Health Insurance",
+        "tran_date": "12/01/2021",
+        "amount": 250.00,
+        "category": "Healthcare",
+        "is_expense": true,
+        "is_recurring": true,
+        "recur_date": "03/01/2022",
+        "notes": "Sign Up for New Insurance"
+    },
+    {
+        "user_id": 5,
+        "tran_name": "Rent",
+        "tran_date": "12/01/2021",
+        "amount": 1000.00,
+        "category": "Utilities",
+        "is_expense": true,
+        "is_recurring": true,
+        "recur_date": "01/01/2022",
+        "notes": "Going Up 100$ Starting This Month"
+    },
+    {
+        "user_id": 5,
+        "tran_name": "Electric",
+        "tran_date": "11/30/2021",
+        "amount": 125.00,
+        "category": "Utilities",
+        "is_expense": true,
+        "is_recurring": true,
+        "recur_date": "12/30/2022",
+        "notes": "Turn off your lights next time"
+    },
+    {
+        "user_id": 5,
+        "tran_name": "Car Payment",
+        "tran_date": "12/05/2021",
+        "amount": 300.00,
+        "category": "Automotive",
+        "is_expense": true,
+        "is_recurring": true,
+        "recur_date": "01/05/2022",
+        "notes": "One More Year Remaining"
+    },
+    {
+        "user_id": 5,
+        "tran_name": "Health Insurance",
+        "tran_date": "12/01/2021",
+        "amount": 250.00,
+        "category": "Healthcare",
+        "is_expense": true,
+        "is_recurring": true,
+        "recur_date": "03/01/2022",
+        "notes": "Sign Up for New Insurance"
+    },
+    {
+        "user_id": 5,
+        "tran_name": "Bank Error In My Favor",
+        "tran_date": "12/01/2021",
+        "amount": 2000.00,
+        "category": "Healthcare",
+        "is_expense": false,
+        "is_recurring": false,
+        "recur_date": "03/01/2022",
+        "notes": ""
+    }
+]
