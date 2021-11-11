@@ -24,7 +24,7 @@ Transaction.init(
       allowNull: false,
     },
     tran_date: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     amount: {
@@ -32,7 +32,7 @@ Transaction.init(
       allowNull: false,
     },
     category: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     is_expense: {
@@ -42,7 +42,7 @@ Transaction.init(
       type: DataTypes.BOOLEAN,
     },
     recur_date: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     notes: {
