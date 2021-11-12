@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Budget, User } = require('../../models');
 
 
-// GET All Budget Data
+// GET all Budget Data
 router.get('/', async (req, res) => {
     try {
         const budgetData = await Budget.findAll();
@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
     }
 } );
 
-//  GET ONE Budget
+// GET ONE Budget
 router.get('/:id', async (req, res) => {
     try {
         const budgetData = await Budget.findByPk(req.params.id, {

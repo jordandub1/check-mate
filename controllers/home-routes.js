@@ -2,7 +2,10 @@ const router = require('express').Router();
 const { Budget, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-// router.get('/user', async (req, res) => {
+/* home-routes: Includes all routes that are not api calls. */
+
+// GET sll user information and associated budget data.
+// TODO: Only get info of the one user that's logged in!
 router.get('/user', async (req, res) => {
   try {
     // Get all budgets and JOIN with user data
@@ -11,6 +14,9 @@ router.get('/user', async (req, res) => {
         {
           model: User,
           attributes: ['id'],
+          where: {
+            id: req.session.user_id //only get budgets that match user_id
+          }
         },
       ],
     });
@@ -28,6 +34,7 @@ router.get('/user', async (req, res) => {
   }
 });
 
+//GET a budget by id.
 router.get('/budget/:id', async (req, res) => {
   try {
     const budgetData = await Budget.findByPk(req.params.id, {
@@ -50,14 +57,17 @@ router.get('/budget/:id', async (req, res) => {
   }
 });
 
+// Redirect user to login page
 router.get('/', (req, res) => {
   res.render('login');
 });
 
+// Redirect user to signup page
 router.get('/signup', async (req, res) => {
   res.render('signup');
 });
 
+// Redirect user to main overview page with all their data
 router.get('/overview', withAuth, async (req, res) => {
   res.render('homepage');
 });

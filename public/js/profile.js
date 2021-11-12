@@ -1,4 +1,4 @@
-//TODO: customize
+//TODO: customize for our user profile
 
 const newFormHandler = async (event) => {
   event.preventDefault();

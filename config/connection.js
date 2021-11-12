@@ -3,6 +3,7 @@ require('dotenv').config();
 
 let sequelize;
 
+// Connects to the Heroku db if availble; uses local db and env vars otherwise
 if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
