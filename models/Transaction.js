@@ -1,4 +1,3 @@
-
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
@@ -13,18 +12,18 @@ Transaction.init(
       autoIncrement: true,
     },
     user_id: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'user',
-            key: 'id',
-        },
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
     },
     tran_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     tran_date: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     amount: {
@@ -32,7 +31,7 @@ Transaction.init(
       allowNull: false,
     },
     category: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     is_expense: {
@@ -42,7 +41,7 @@ Transaction.init(
       type: DataTypes.BOOLEAN,
     },
     recur_date: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     notes: {
