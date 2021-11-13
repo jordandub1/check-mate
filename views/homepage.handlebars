@@ -18,11 +18,7 @@
             </a>
             <a href="#" class="list-group-item list-group-item-action py-2 ripple"
             ><i class="fa fa-plus" aria-hidden="true"></i>
-            <span>Add Income</span></a
-            >
-            <a href="#" class="list-group-item list-group-item-action py-2 ripple"
-            ><i class="fa fa-plus" aria-hidden="true"></i>
-            <span>Add Expenses</span></a
+            <span>Add Income or Expense</span></a
             >
             <a href="/" class="list-group-item list-group-item-action py-2 ripple" id='logout'
             ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
@@ -72,7 +68,7 @@
   </div>
   <!-- Card Row 2 -->
   <div class="row row-cols-1 row-cols-md-4 g-4">
-    <div class="col-3">
+    <div class="col-2">
       <div class="card saving-card">
         <div class="card-body">
           <h5 class="card-title">Saving Goal</h5>
@@ -83,17 +79,13 @@
         </div>
       </div>
     </div>
-    <div class="col-2.5">
-      <div class="card loan-card">
-        <div class="card-body">
-          <h5 class="card-title">Loan Payoff?</h5>
-          <p class="card-text">
-            [Insert Loan Information Based On User Input]
-          </p>
-        </div>
-      </div>
+
+    <div class="col-8">
+      <!--Insert Location for Transaction List-->
+      {{>trx_card}}
     </div>
-    <div class="col-3">
+
+    <div class="col-1">
       <div class="card stock-card">
         <div class="card-body">
           <h5 class="card-title">Top Performing Stocks?</h5>
@@ -101,6 +93,8 @@
         </div>
       </div>
     </div>
+  </div>
+
     <div class="col-2.5">
       <div class="card tbd-card">
         <div class="card-body">
@@ -111,7 +105,4 @@
     </div>
   </div>
 
-  
-
   <script src='./js/logout.js'></script>
-  <script src='./js/script/js'></script>
