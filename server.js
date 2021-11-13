@@ -20,6 +20,7 @@ const sess = {
   store: new SequelizeStore({
     db: sequelize,
   }),
+  //cookie.maxAge: 60000
 };
 
 app.use(session(sess));

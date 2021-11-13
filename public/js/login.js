@@ -4,6 +4,7 @@ const loginFormHandler = async (event) => {
   const email = document.querySelector('#email').value.trim();
   const password = document.querySelector('#password').value.trim();
 
+  //If the user provided an email and password, send a POST request to /api/users/login in user-routes.js
   if (email && password) {
     const response = await fetch('/api/users/login', {
       method: 'POST',
@@ -19,6 +20,7 @@ const loginFormHandler = async (event) => {
   }
 };
 
+// TODO: move this to a signup.js file
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
