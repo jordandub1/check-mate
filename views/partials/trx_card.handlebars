@@ -1,26 +1,27 @@
 <div class='card loan-card'>
   <div class='card-body'>
-    <h5 class='card-title'>Transaction List</h5>
+    <h5 class='card-title'>Monthly Expenses</h5>
     <table>
       <tr>
-        <th class='col-md-1'>Payee</th>
+        <th class='col-md-2'>Payee</th>
         <th class='col-md-1'>Date</th>
         <th class='col-md-1'>Amount</th>
         <th class='col-md-1'>Category</th>
-        <th class='col-md-1'>Recur?</th>
-        <th class='col-md-1'>Recurring Date</th>
+        <th class='col-md-1'>Next Bill Date</th>
         <th class='col-md-3'>Notes</th>
       </tr>
       {{#each transactions as |transaction|}}
+      {{#if transaction.is_recurring}}
         <tr>
-          <td class='col-md-1'>{{transaction.tran_name}}</td>
+          <td class='col-md-2'>{{transaction.tran_name}}</td>
           <td class='col-md-1'>{{transaction.tran_date}}</td>
           <td class='col-md-1'>${{transaction.amount}}</td>
           <td class='col-md-1'>{{transaction.category}}</td>
-          <td class='col-md-1'>{{#if transaction.is_recurring}} Yes {{else}} No {{/if}}</td>
           <td class='col-md-1'>{{transaction.recur_date}}</td>
           <td class='col-md-3'>{{transaction.notes}}</td>
         </tr>
+      {{else}}
+      {{/if}}
       {{/each}}
 
     </table>

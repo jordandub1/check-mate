@@ -45,8 +45,6 @@ router.get('/user', async (req, res) => {
       transaction.get({ plain: true })
     );
 
-    console.log(transactions);
-
     // Pass serialized data and session flag into template
     res.render('homepage', {
       ...budgets,
