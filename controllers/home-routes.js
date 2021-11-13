@@ -99,10 +99,12 @@ router.get('/overview', withAuth, async (req, res) => {
   res.render('homepage');
 });
 
+//Redirect to Budget Display Page
 router.get('/budget-display', async (req, res) => {
   res.render('budget-display');
 });
 
+//Redirect to Transactions Display Page
 router.get('/transaction-display', async (req, res) => {
   res.render('transaction-display');
 });
