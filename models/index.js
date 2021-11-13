@@ -1,4 +1,3 @@
-//TODO: customize project section
 const User = require('./User');
 const Transaction = require('./Transaction');
 const Budget = require('./Budget');
