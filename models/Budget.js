@@ -26,6 +26,10 @@ Budget.init(
       type: DataTypes.DECIMAL,
       allowNull: false,
     },
+    total_expense: {
+      type: DataTypes.DECIMAL,
+      allowNull: true,
+    },
     savings_goal_name: {
       type: DataTypes.STRING,
       allowNull: true,
@@ -36,6 +40,10 @@ Budget.init(
     },
     savings_date: {
       type: DataTypes.DATE,
+      allowNull: true,
+    },
+    goal_remain:{
+      type: DataTypes.DECIMAL,
       allowNull: true,
     }
   },

@@ -44,8 +44,6 @@ router.get('/user', async (req, res) => {
     const budgets = budgetData.map((budget) => budget.get({ plain: true }));
     const transactions = transactionData.map((transaction) => transaction.get({ plain: true }));
 
-    console.log(transactions)
-
     // Pass serialized data and session flag into template
     res.render('homepage', {
       ...budgets,
