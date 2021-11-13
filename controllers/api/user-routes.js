@@ -13,7 +13,6 @@ router.post('/', async (req, res) => {
 
       res.status(200).json(userData);
     });
-    
   } catch (err) {
     res.status(400).json(err);
   }
@@ -41,7 +40,7 @@ router.post('/register', async (req, res) => {
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
-    
+
     //If username is incorrect, reject with alert.
     if (!userData) {
       res
@@ -77,6 +76,7 @@ router.post('/login', async (req, res) => {
 //If the user selects logout, the session data is wiped.
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
+    req.session.cookie.expires = false;
     req.session.destroy(() => {
       res.status(204).end();
     });
