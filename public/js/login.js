@@ -1,7 +1,7 @@
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
-  const email = document.querySelector('#uname').value.trim();
+  const email = document.querySelector('#email').value.trim();
   const password = document.querySelector('#password').value.trim();
 
   //If the user provided an email and password, send a POST request to /api/users/login in user-routes.js
