@@ -15,7 +15,7 @@ const newFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/login');
+      document.location.replace('/');
     } else {
       alert('Failed to add user');
     }
