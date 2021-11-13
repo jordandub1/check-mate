@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Budget, User } = require('../models');
+const { Budget, User, Transaction } = require('../models');
 const withAuth = require('../utils/auth');
 
 /* home-routes: Includes all routes that are not api calls. */
@@ -27,13 +27,29 @@ router.get('/user', async (req, res) => {
         },
       ],
     });
+     // Get all Transactions and JOIN with user data
+    const transactionData = await Transaction.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['id'],
+          where: {
+            id: req.session.user_id //only get Transactions that match user_id
+          }
+        },
+      ],
+    });
 
     // Serialize data so the template can read it
     const budgets = budgetData.map((budget) => budget.get({ plain: true }));
+    const transactions = transactionData.map((transaction) => transaction.get({ plain: true }));
+
+    console.log(transactions)
 
     // Pass serialized data and session flag into template
     res.render('homepage', {
       ...budgets,
+      transactions,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
