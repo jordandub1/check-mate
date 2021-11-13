@@ -5,6 +5,7 @@ const newFormHandler = async (event) => {
   const email = document.querySelector('#email-signup').value.trim();
   const password = document.querySelector('#pwd').value.trim();
 
+  //Adds name, email, password to JSON
   if (name && email && password) {
     const response = await fetch(`/api/users/register`, {
       method: 'POST',
