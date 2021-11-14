@@ -92,16 +92,25 @@
         <form id="project-form">
           <div class="modal-body">
             <div class="form-group">
-              <label for="total_income">Monthly Budget</label>
-              <input type="text" id="total_income" class="form-control" value="{{ budget.total_income }}"
-                required />
+              <label for="total_income">Monthly Budget Amount</label>
+              <input type="text" id="total_income" class="form-control" value="{{ budget.total_income }}" required/>
             </div>
-    
             <div class="form-group">
               <label for="total_remain">Remaining Balance($)</label>
-              <input type="number" id="total_remain" class="form-control" value="{{ budget.total_remain }}" required />
+              <input type="text" id="total_remain" class="form-control" value="{{ budget.total_remain }}" required/>
             </div>
-
+            <div class="form-group">
+              <label for="savings-name">Enter the name of your savings goal:</label>
+              <input type="text" id="savings-name" class="form-control" value="{{ budget.savings_goal_name }}" placeholder="ex: New Car Down Payment"/>
+            </div>
+            <div class="form-group">
+              <label for="savings-amount">Savings Goal Amount:</label>
+              <input type="text" id="savings-amount" class="form-control" value="{{ budget.savings_amount }}"/>
+            </div>
+            <div class="form-group">
+              <label for="savings-date">When do you want to meet your savings goal?</label>
+              <input type="date" id="savings-date" class="form-control" value="{{ budget.savings_date }}" placeholder="YYYY-MM-DD"/>
+            </div>
     
           </div>
           <div class="modal-footer">
@@ -128,32 +137,32 @@
             {{!-- Transaction Name Input --}}
             <div class="form-group">
               <label for="trx_name">Name of Transaction (or Income)?</label>
-              <input type="text" id="trx_name" class="form-control" value="{{ transaction.tran_name }}" placeholder="ex: New Tires"/>
+              <input type="text" id="trx_name" class="form-control" value="{{ transaction.tran_name }}" placeholder="ex: New Tires" required/>
             </div>
             {{!-- Tran Date Input --}}
             <div class="form-group">
               <label for="trx_date">Date of transaction?</label>
-              <input type="date" id="trx_date" class="form-control" value="{{ transaction.tran_date }}" placeholder="YYYY-MM-DD"/>
+              <input type="date" id="trx_date" class="form-control" value="{{ transaction.tran_date }}" placeholder="YYYY-MM-DD" required/>
             </div>
             {{!-- Category Input --}}
             <div class="form-group">
               <label for="trx_category">Category Name</label>
-              <input type="text" id="trx_category" class="form-control" value="{{ transaction.category }}" placeholder="ex: Automobile Upkeep"/>
+              <input type="text" id="trx_category" class="form-control" value="{{ transaction.category }}" placeholder="ex: Automobile Upkeep" required/>
             </div>
             {{!-- Income or Expense Input --}}
             <div class="form-group">
               <label for="is_exp">Is this an expense?</label>
-              <input type="text" id="is_exp" class="form-control" value="{{ transaction.is_expense }}" placeholder="Y/N"/>
+              <input type="text" id="is_exp" class="form-control" value="{{ transaction.is_expense }}" placeholder="Y/N" required/>
             </div>
             {{!-- Recurring Input --}}
             <div class="form-group">
               <label for="recurring">Is this recurring?</label>
-              <input type="text" id="recurring" class="form-control" value="{{ transaction.is_recurring }}" placeholder="Y/N"/>
+              <input type="text" id="recurring" class="form-control" value="{{ transaction.is_recurring }}" placeholder="Y/N" required/>
             </div>
             {{!-- Recurring Date Input --}}
             <div class="form-group">
               <label for="recurring-date">When does it recur (if applicable)?</label>
-              <input type="text" id="recurring-date" class="form-control" value="{{ transaction.recur_date }}" placeholder="ex: The first of the month"/>
+              <input type="text" id="recurring-date" class="form-control" value="{{ transaction.recur_date }}" placeholder="ex: The first of the month" required/>
             </div>
             {{!-- Notes Input --}}
             <div class="form-group">
