@@ -9,9 +9,10 @@ const withAuth = require('../utils/auth');
 router.get('/user', async (req, res) => {
   try {
     //redirect to login page if user is not logged in
-    console.log(req.session.logged_in);
-    if (!req.session.logged_in) {
-      res.redirect('/');
+    console.log(req.session.logged_in)
+    if(!req.session.logged_in) {
+      res.redirect('/'); 
+      return;
     }
 
     // Get all budgets and JOIN with user data
@@ -81,8 +82,9 @@ router.get('/budget/:id', async (req, res) => {
 
 // Redirect user to login page. If they're already logged in, send to user.
 router.get('/', (req, res) => {
-  if (req.session.logged_in) {
+  if(req.session.logged_in) {
     res.redirect('/user');
+    return; 
   }
   res.render('login');
 });
