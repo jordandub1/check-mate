@@ -11,15 +11,12 @@
             </a>
             <button class="list-group-item list-group-item-action py-2 ripple" data-toggle="modal" data-target="#project-modal" ><i class="fa fa-usd" aria-hidden="true"></i>
             <span>Edit Budget</span>
-
             </button>
-
-            </a>
             <!-- Add Income / Expense Modal -->
-            <a href="#" class="list-group-item list-group-item-action py-2 ripple"
-            ><i class="fa fa-plus" aria-hidden="true"></i>
-            <span>Add Income or Expense</span></a
-            >
+            <button class="list-group-item list-group-item-action py-2 ripple" data-toggle="modal" data-target="#income-expense-modal" ><i class="fa fa-usd" aria-hidden="true"></i>
+            <span>Add Income or Expense</span>
+            </button>
+            <!-- Logout Link -->
             <a href="/" class="list-group-item list-group-item-action py-2 ripple" id='logout'
             ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
@@ -105,7 +102,7 @@
     </div>
   </div>
 
-  <!-- Modal -->
+  <!-- Modal For Budget -->
   <div class="modal fade custom-modal" id="project-modal" tabindex="-1" role="dialog"
     aria-labelledby="project-modal-form" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -134,6 +131,39 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             <button type="submit" class="btn custom-btn">Submit Budget Info</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+    <!-- Modal For Add Income and Expense -->
+  <div class="modal fade custom-modal" id="income-expense-modal" tabindex="-1" role="dialog"
+    aria-labelledby="income-expense-form" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="income-expense-form">Add Income or Expense</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form id="project-form">
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="add_income">Add Income</label>
+              <input type="text" id="add_income" class="form-control" value="{{ budget.add_income }}" placeholder="$0.00"/>
+            </div>
+    
+            <div class="form-group">
+              <label for="add_expense">Add Expense</label>
+              <input type="text" id="add_expense" class="form-control" value="{{ budget.add_expense }}" placeholder="$0.00"/>
+            </div>
+
+    
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn custom-btn">Submit</button>
           </div>
         </form>
       </div>
