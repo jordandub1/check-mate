@@ -125,17 +125,41 @@
         </div>
         <form id="project-form">
           <div class="modal-body">
+            {{!-- Transaction Name Input --}}
             <div class="form-group">
-              <label for="add_income">Add Income</label>
-              <input type="text" id="add_income" class="form-control" value="{{ budget.add_income }}" placeholder="$0.00"/>
+              <label for="trx_name">Name of Transaction (or Income)?</label>
+              <input type="text" id="trx_name" class="form-control" value="{{ transaction.tran_name }}" placeholder="ex: New Tires"/>
             </div>
-    
+            {{!-- Tran Date Input --}}
             <div class="form-group">
-              <label for="add_expense">Add Expense</label>
-              <input type="text" id="add_expense" class="form-control" value="{{ budget.add_expense }}" placeholder="$0.00"/>
+              <label for="trx_date">Date of transaction?</label>
+              <input type="date" id="trx_date" class="form-control" value="{{ transaction.tran_date }}" placeholder="YYYY-MM-DD"/>
             </div>
-
-    
+            {{!-- Category Input --}}
+            <div class="form-group">
+              <label for="trx_category">Category Name</label>
+              <input type="text" id="trx_category" class="form-control" value="{{ transaction.category }}" placeholder="ex: Automobile Upkeep"/>
+            </div>
+            {{!-- Income or Expense Input --}}
+            <div class="form-group">
+              <label for="is_exp">Is this an expense?</label>
+              <input type="text" id="is_exp" class="form-control" value="{{ transaction.is_expense }}" placeholder="Y/N"/>
+            </div>
+            {{!-- Recurring Input --}}
+            <div class="form-group">
+              <label for="recurring">Is this recurring?</label>
+              <input type="text" id="recurring" class="form-control" value="{{ transaction.is_recurring }}" placeholder="Y/N"/>
+            </div>
+            {{!-- Recurring Date Input --}}
+            <div class="form-group">
+              <label for="recurring-date">When does it recur (if applicable)?</label>
+              <input type="text" id="recurring-date" class="form-control" value="{{ transaction.recur_date }}" placeholder="ex: The first of the month"/>
+            </div>
+            {{!-- Notes Input --}}
+            <div class="form-group">
+              <label for="notes">Notes:</label>
+              <input type="text" id="notes" class="form-control" value="{{ transaction.notes }}" placeholder="ex: Remember to cancel after the first year"/>
+            </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -149,6 +173,4 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <script src='./js/logout.js'></script>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-

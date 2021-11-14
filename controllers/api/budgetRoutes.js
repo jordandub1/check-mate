@@ -53,9 +53,6 @@ router.put('/:id', async (req, res) => {
         //   user_id: req.body.user_id,
         total_income: req.body.total_income,
         total_remain: req.body.total_remain,
-        //TODO: add income and expense for modal
-        //add_income: ,
-        //add_expense: ,
         //   savings_goal_name: req.body.savings_goal_name,
         //   savings_amount: req.body.savings_amount,
         //   savings_date: req.body.savings_date
