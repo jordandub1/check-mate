@@ -37,8 +37,8 @@ const newFormHandler = async (event) => {
   }
 };
 
-document
-  .querySelector('.new-budget-form')
-  .addEventListener('submit', newFormHandler);
+// document
+//   .querySelector('.new-budget-form')
+//   .addEventListener('submit', newFormHandler);
 
 document.querySelector('#logout').addEventListener('click', logout);
