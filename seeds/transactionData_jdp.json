@@ -78,7 +78,7 @@
     },
     {
         "user_id": 1,
-        "tran_name": "Disney +",
+        "tran_name": "Disney+",
         "tran_date": "12/10/2021",
         "amount": 8,
         "category": "Entertainment",
@@ -86,6 +86,28 @@
         "is_recurring": true,
         "recur_date": "1/10/2022",
         "notes": "Boba Fett Soon!"
+    },
+    {
+        "user_id": 1,
+        "tran_name": "New Books",
+        "tran_date": "12/20/2021",
+        "amount": 50,
+        "category": "Entertainment",
+        "is_expense": true,
+        "is_recurring": false,
+        "recur_date": "",
+        "notes": "Thrawn, Axioms End, Eloquent Javascript"
+    },
+    {
+        "user_id": 1,
+        "tran_name": "Dinner Date",
+        "tran_date": "12/20/2021",
+        "amount": 45,
+        "category": "Entertainment",
+        "is_expense": true,
+        "is_recurring": false,
+        "recur_date": "",
+        "notes": "The Porch"
     },
     {
         "user_id": 2,
