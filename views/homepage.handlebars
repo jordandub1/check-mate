@@ -78,77 +78,13 @@
     </div>
   </div>
 
-  <!-- Modal For Budget -->
+  <!-- Modals -->
   <div class="modal fade custom-modal" id="project-modal" tabindex="-1" role="dialog"
     aria-labelledby="project-modal-form" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="project-modal-form">Edit Budget</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <form id="project-form">
-          <div class="modal-body">
-            <div class="form-group">
-              <label for="total_income">Monthly Budget</label>
-              <input type="text" id="total_income" class="form-control" value="{{ budget.total_income }}"
-                required />
-            </div>
-    
-            <div class="form-group">
-              <label for="total_remain">Remaining Balance($)</label>
-              <input type="number" id="total_remain" class="form-control" value="{{ budget.total_remain }}" required />
-            </div>
-
-    
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn custom-btn">Submit Budget Info</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-    <!-- Modal For Add Income and Expense -->
-  <div class="modal fade custom-modal" id="income-expense-modal" tabindex="-1" role="dialog"
-    aria-labelledby="income-expense-form" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="income-expense-form">Add Income or Expense</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <form id="project-form">
-          <div class="modal-body">
-            <div class="form-group">
-              <label for="add_income">Add Income</label>
-              <input type="text" id="add_income" class="form-control" value="{{ budget.add_income }}" placeholder="$0.00"/>
-            </div>
-    
-            <div class="form-group">
-              <label for="add_expense">Add Expense</label>
-              <input type="text" id="add_expense" class="form-control" value="{{ budget.add_expense }}" placeholder="$0.00"/>
-            </div>
-
-    
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn custom-btn">Submit</button>
-          </div>
-        </form>
-      </div>
-    </div>
+    {{>modals}}
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <script src='./js/logout.js'></script>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
