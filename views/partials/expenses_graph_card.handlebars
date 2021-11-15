@@ -1,0 +1,40 @@
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Expense Breakdown</h5>
+        <p class="card-text">
+            <canvas id="expense_chart" width="6000" height="4000"></canvas>
+            <script>
+
+                // Setup
+                const labels = [
+                    'January',
+                    'February',
+                    'March',
+                    'April',
+                    'May',
+                    'June',
+                ];
+
+                const data = {
+                    labels: labels,
+                    datasets: [{
+                        label: 'My First dataset',
+                        backgroundColor: 'rgb(255, 99, 132)',
+                        borderColor: 'rgb(255, 99, 132)',
+                        data: [0, 10, 5, 2, 20, 30, 45],
+                    }]
+                };
+
+                // Config
+                const config = {
+                    type: 'line',
+                    data: data,
+                    options: {}
+                };
+
+                // Render chart
+                const myChart = new Chart(document.getElementById('expense_chart'), config);
+            </script>
+        </p>
+    </div>
+</div>
