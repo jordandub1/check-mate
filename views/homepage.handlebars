@@ -16,15 +16,10 @@
     </div>
 
     <div class="col-3">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Expense Breakdown</h5>
-          <p class="card-text">
-            [Insert Graph of Expenses Based On User Input]
-          </p>
-        </div>
-      </div>
+      <!--Line Graph-->
+      {{>expenses_graph_card}}
     </div>
+    
     <div class="col-5">
       <div class="card">
         <div class="card-body">
@@ -36,6 +31,7 @@
   </div>
   <!-- Card Row 2 -->
   <div class="row row-cols-1 row-cols-md-4 g-4">
+
     <div class="col-2">
       {{>saving_goal_card}}
     </div>
