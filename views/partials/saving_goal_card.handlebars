@@ -1,0 +1,11 @@
+<!--Partial of the saving goal card in the overview/hompage -->
+<div class="card saving-card">
+    <div class="card-body">
+        {{#each budgets as |budget|}}
+        <h5 class="card-title">Saving Goal</h5>
+        <p class="card-text">{{savings_goal_name}}</p>
+        <br />
+        <p class="card-text" >${{savings_amount}}</p>
+        {{/each}}
+    </div>
+</div>

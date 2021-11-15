@@ -9,17 +9,12 @@
     <h1 id="overview">Overview</h1>
   </div>
   <div class="row row-cols-1 row-cols-md-4 g-4">
+
     <div class="col-3">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Monthly Budget</h5>
-          <p class="card-text">{{ budget.total_income }}</p>
-          <br />
-          <h5 class="card-title">Remaining Balance</h5>
-          <p class="card-text">{{ budget.total_remain }}</p>
-        </div>
-      </div>
+      <!--Monthly budget partial-->
+      {{>monthly_budget_card}}
     </div>
+
     <div class="col-3">
       <div class="card">
         <div class="card-body">
@@ -42,15 +37,7 @@
   <!-- Card Row 2 -->
   <div class="row row-cols-1 row-cols-md-4 g-4">
     <div class="col-2">
-      <div class="card saving-card">
-        <div class="card-body">
-          <h5 class="card-title">Saving Goal</h5>
-          <p class="card-text">[Insert User Input Here]</p>
-          <br />
-          <h5 class="card-title">Remaining Balance</h5>
-          <p class="card-text">[Insert User Input Here]</p>
-        </div>
-      </div>
+      {{>saving_goal_card}}
     </div>
 
     <div class="col-8">

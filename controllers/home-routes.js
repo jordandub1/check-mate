@@ -42,13 +42,14 @@ router.get('/user', async (req, res) => {
 
     // Serialize data so the template can read it
     const budgets = budgetData.map((budget) => budget.get({ plain: true }));
+
     const transactions = transactionData.map((transaction) =>
       transaction.get({ plain: true })
     );
 
     // Pass serialized data and session flag into template
     res.render('homepage', {
-      ...budgets,
+      budgets,
       transactions,
       logged_in: req.session.logged_in,
     });
