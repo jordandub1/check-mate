@@ -28,3 +28,49 @@ async function newFormHandler(event) {
   }
 
 document.querySelector('.new-budget-form').addEventListener('submit', newFormHandler);
+
+async function newIncomeHandler(event) {
+
+    event.preventDefault();
+    
+    const user_id = document.session.user_id,
+    const tran_name = document.querySelector('#trx_name').value;
+    const tran_date = document.querySelector('#trx_date').value;
+    const amount = 2000,
+    const category = document.querySelector('#trx_category').value;
+    const is_expense = true;
+    const is_recurring = true;
+    const recur_date = document.querySelector('recurring-date').value;
+    const notes = document.querySelector('notes').value;
+
+
+    const response = await fetch('/api/transaction', {
+        method: 'POST',
+        body: JSON.stringify({
+            
+            user_id,
+            tran_name,
+            tran_date,
+            amount,
+            category,
+            is_expense,
+            is_recurring,
+            recur_date,
+            notes,
+
+        }),
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    });
+
+    if (response.ok) {
+        document.location.replace('/');
+    } else {
+        alert('Failed to update income/expense')
+    }
+
+}
+
+
+document.querySelector('#transaction-form').addEventListener('submit', newIncomeHandler);
