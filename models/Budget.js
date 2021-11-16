@@ -24,7 +24,7 @@ Budget.init(
     },
     total_remain: {
       type: DataTypes.DECIMAL,
-      allowNull: false,
+      allowNull: true,
     },
     total_expense: {
       type: DataTypes.DECIMAL,
