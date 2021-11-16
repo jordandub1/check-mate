@@ -65,6 +65,7 @@ a {
 /* Footer */
 .footer {
   height: 3vh;
+  margin-top: 20px;
 }
 
 #footer-text {
