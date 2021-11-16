@@ -128,3 +128,7 @@ a {
   margin-right: none;
   margin-bottom: 8px;
 }
+
+.graph-card {
+  width: 500px;
+}
