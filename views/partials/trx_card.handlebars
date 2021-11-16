@@ -1,14 +1,14 @@
 <div class='card loan-card'>
   <div class='card-body'>
-    <h5 class='card-title col-md-11'>Monthly Expenses</h5>
+    <h5 class='card-title col-md-14'>Monthly Expenses</h5><a href='/transaction-display' id='see-more'>(see all)</a>
     <table>
       <tr>
         <th class='col-md-2'>Payee</th>
         <th class='col-md-1'>Date</th>
         <th class='col-md-1'>Amount</th>
         <th class='col-md-1'>Category</th>
-        <th class='col-md-1'>Next Bill Date</th>
-        <th class='col-md-3'>Notes</th>
+        <th class='col-md-3'>Bill Recurrance</th>
+        <th class='col-md-4'>Notes</th>
       </tr>
       {{#each transactions as |transaction|}}
         {{#if transaction.is_recurring}}
@@ -17,8 +17,9 @@
             <td class='col-md-1'>{{transaction.tran_date}}</td>
             <td class='col-md-1'>${{transaction.amount}}</td>
             <td class='col-md-1'>{{transaction.category}}</td>
-            <td class='col-md-1'>{{transaction.recur_date}}</td>
-            <td class='col-md-3'>{{transaction.notes}}</td>
+            <td class='col-md-3'>{{transaction.recur_date}}</td>
+            <td class='col-md-4'>{{transaction.notes}}</td>
+            
           </tr>
         {{else}}
         {{/if}}
@@ -26,5 +27,5 @@
 
     </table>
   </div>
-  <p class='col-md-1' id='see-more'><a href='/transaction-display'>(see all)</a></p>
+
 </div>
