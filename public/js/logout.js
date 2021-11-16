@@ -93,9 +93,8 @@ async function newBudgetHandler(event) {
 
   event.preventDefault();
   
-  const user_id = (document.querySelector('#project-form')).getAttribute("userInfo");
+  const user_id = (document.querySelector('#project-form')).getAttribute("userInfo2");
   console.log(user_id);
-
   const total_income = document.querySelector('#total_income').value;
   const total_remain = document.querySelector('#total_remain').value;
   const savings_goal_name = document.querySelector('#savings-name').value;
@@ -106,7 +105,7 @@ async function newBudgetHandler(event) {
   const response = await fetch('/api/budget', {
       method: 'POST',
       body: JSON.stringify({
-        
+
         user_id,
         total_income,
         total_remain,
