@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-body">
-        <h5 class="card-title">Changes Over Time</h5>
+        <h5 class="card-title">Total Spending By Day</h5>
         <canvas id = "spending_chart" width="500" height = "300" transactions = "{{stringify transactions}}"></canvas>
         <script>
             /* Data Preparation */
@@ -17,8 +17,6 @@
                 }
             }
             dates.sort()
-
-            
 
             // Determine how much was spent on each day.
             let spendingTotals = dates.map((date) => {
