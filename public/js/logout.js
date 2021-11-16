@@ -41,8 +41,10 @@ const newFormHandler = async (event) => {
 //   .querySelector('.new-budget-form')
 //   .addEventListener('submit', newFormHandler);
 
-document.querySelector('#logout').addEventListener('click', logout);
 
+
+
+//Transaction Script
 async function newIncomeHandler(event) {
 
   event.preventDefault();
@@ -51,10 +53,10 @@ async function newIncomeHandler(event) {
   console.log(user_id)
   const tran_name = document.querySelector('#trx_name').value;
   const tran_date = document.querySelector('#trx_date').value;
-  const amount = 2000;
+  const amount = document.querySelector('#trx_amount');
   const category = document.querySelector('#trx_category').value;
   const is_expense = true;
-  const is_recurring = true;
+  const is_recurring = false;
   const recur_date = document.querySelector('#recurring-date').value;
   const notes = document.querySelector('#notes').value;
 
@@ -85,7 +87,51 @@ async function newIncomeHandler(event) {
       alert('Failed to update income/expense')
   }
 
+};
+
+async function newBudgetHandler(event) {
+
+  event.preventDefault();
+  
+  const user_id = (document.querySelector('#project-form')).getAttribute("userInfo");
+  console.log(user_id);
+
+  const total_income = document.querySelector('#total_income').value;
+  const total_remain = document.querySelector('#total_remain').value;
+  const savings_goal_name = document.querySelector('#savings-name').value;
+  const savings_amount = document.querySelector('#savings-amount').value;
+  const savings_date = document.querySelector('#savings-date').value;
+
+
+  const response = await fetch('/api/budget', {
+      method: 'POST',
+      body: JSON.stringify({
+        
+        user_id,
+        total_income,
+        total_remain,
+        savings_goal_name,
+        savings_amount,
+        savings_date,
+
+      }),
+      headers: {
+          'Content-Type': 'application/json'
+      },
+  });
+
+  if (response.ok) {
+      document.location.replace('/');
+  } else {
+      alert('Failed to update income/expense')
+  }
+
 }
 
 
+
+
+//Event Listeners
+document.querySelector('#logout').addEventListener('click', logout);
 document.querySelector('#transaction-form').addEventListener('submit', newIncomeHandler);
+document.querySelector('#project-form').addEventListener('submit', newBudgetHandler);
