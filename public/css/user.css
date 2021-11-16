@@ -13,6 +13,10 @@ a {
   color: black;
 }
 
+.navbar-brand {
+  font-size: 24px;
+}
+
 @media (min-width: 991.98px) {
   main {
     padding-left: 240px;
@@ -109,4 +113,9 @@ a {
   flex-wrap: wrap;
   margin-right: 0px;
   margin-left: -15px;
+}
+
+#see-more {
+  margin-right: none;
+  margin-bottom: 8px;
 }

@@ -58,8 +58,13 @@
             </div>
             {{!-- Transaction Amount Input --}}
             <div class="form-group">
-              <label for="trx_amount">Amount of Transaction (or Income)?</label>
+              <label for="trx_amount">Amount of Transaction?</label>
               <input type="text" id="trx_amount" class="form-control" value="{{ transaction.amount }}" placeholder="0.00" required/>
+            </div>
+            {{!-- Income or Expense Input --}}
+            <div class='form-group'>
+              <label for="is_exp">Is this an expense?</label><br>
+              <input type="checkbox" id="is_exp" class="fav_language" value="{{ transaction.is_expense }}" required>
             </div>
             {{!-- Tran Date Input --}}
             <div class="form-group">
@@ -70,11 +75,6 @@
             <div class="form-group">
               <label for="trx_category">Category Name</label>
               <input type="text" id="trx_category" class="form-control" value="{{ transaction.category }}" placeholder="ex: Automobile Upkeep" required/>
-            </div>
-            {{!-- Income or Expense Input --}}
-            <div class="form-group">
-              <label for="is_exp">Is this an expense?</label>
-              <input type="text" id="is_exp" class="form-control" value="{{ transaction.is_expense }}" placeholder="Y/N" required/>
             </div>
             {{!-- Recurring Input --}}
             <div class="form-group">
