@@ -1,9 +1,16 @@
 :root {
-  --primary: rgb(59, 59, 59);
+  --primary: #f0f0f0;
 }
 
 body {
   background-color: var(--primary);
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  text-align: center;
+}
+
+a {
+  color: black;
 }
 
 @media (min-width: 991.98px) {
@@ -75,9 +82,14 @@ body {
 #overview {
   margin-bottom: 25px;
   margin-top: 100px;
+  color: black;
 }
 
 /* Card Styling */
+.card {
+  box-shadow: 3px 3px 3px gray;
+}
+
 .card-title,
 .card-text {
   text-align: center;
@@ -95,11 +107,4 @@ body {
   flex-wrap: wrap;
   margin-right: 0px;
   margin-left: -15px;
-}
-
-/* Sign Up */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #007bff;
-  text-align: center;
 }

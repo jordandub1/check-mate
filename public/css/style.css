@@ -1,9 +1,10 @@
 :root {
-  --primary: rgb(59, 59, 59);
+  --primary: #f0f0f0;
 }
 
 body {
   background-color: var(--primary);
+  font-family: 'Open Sans', sans-serif;
 }
 
 @media (min-width: 991.98px) {
