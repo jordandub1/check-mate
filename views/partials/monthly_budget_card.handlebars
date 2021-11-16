@@ -1,11 +1,13 @@
 <!--Partial for Monthly budget/remaining balance card in the overview-->
 <div class='card'>
-  <div class='card-body'>
-    {{#each budgets as |budget|}}
-      <h5 class='card-title'>Monthly Budget</h5>
-      <p class='card-text'>${{budget.total_income}}</p>
-      <h5 class='card-title'>Remaining Balance</h5>
-      <p class='card-text'>${{budget.total_remain}}</p>
-    {{/each}}
-  </div>
+  <a id='card-link' href='/budget-display'>
+    <div class='card-body'>
+      {{#each budgets as |budget|}}
+        <h5 class='card-title'>Monthly Budget</h5>
+        <p class='card-text'>${{budget.total_income}}</p>
+        <h5 class='card-title'>Remaining Balance</h5>
+        <p class='card-text'>${{budget.total_remain}}</p>
+      {{/each}}
+    </div>
+  </a>
 </div>
