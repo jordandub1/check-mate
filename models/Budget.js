@@ -20,7 +20,7 @@ Budget.init(
     },
     total_income: {
       type: DataTypes.DECIMAL,
-      allowNull: false,
+      allowNull: true,
     },
     total_remain: {
       type: DataTypes.DECIMAL,
@@ -42,10 +42,10 @@ Budget.init(
       type: DataTypes.DATE,
       allowNull: true,
     },
-    goal_remain:{
+    goal_remain: {
       type: DataTypes.DECIMAL,
       allowNull: true,
-    }
+    },
   },
   {
     sequelize,
