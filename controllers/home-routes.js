@@ -27,6 +27,7 @@ router.get('/user', async (req, res) => {
         },
       ],
     });
+    console.log(budgetData);
     // Get all Transactions and JOIN with user data
     const transactionData = await Transaction.findAll({
       include: [
