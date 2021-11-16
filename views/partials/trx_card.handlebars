@@ -3,12 +3,12 @@
     <h5 class='card-title col-md-14'>Monthly Expenses</h5>
     <table>
       <tr>
-        <th class='col-md-2'>Payee</th>
-        <th class='col-md-1'>Date</th>
-        <th class='col-md-1'>Amount</th>
-        <th class='col-md-1'>Category</th>
-        <th class='col-md-3'>Bill Recurrance</th>
-        <th class='col-md-4'>Notes</th>
+        <th class='col-md-2 budget-page-header'>Payee</th>
+        <th class='col-md-1 budget-page-header'>Date</th>
+        <th class='col-md-1 budget-page-header'>Amount</th>
+        <th class='col-md-1 budget-page-header'>Category</th>
+        <th class='col-md-3 budget-page-header'>Bill Recurrance</th>
+        <th class='col-md-4 budget-page-header'>Notes</th>
       </tr>
       {{#each transactions as |transaction|}}
         {{#if transaction.is_recurring}}
