@@ -49,8 +49,8 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form id="project-form">
-          <div class="modal-body">
+        <form id="transaction-form">
+          <div id = "transaction-modal" class="modal-body" userInfo = "{{user.id}}">
             {{!-- Transaction Name Input --}}
             <div class="form-group">
               <label for="trx_name">Name of Transaction (or Income)?</label>
@@ -79,7 +79,7 @@
             {{!-- Recurring Date Input --}}
             <div class="form-group">
               <label for="recurring-date">When does it recur (if applicable)?</label>
-              <input type="text" id="recurring-date" class="form-control" value="{{ transaction.recur_date }}" placeholder="ex: The first of the month" required/>
+              <input type="text" id="recurring-date" class="form-control" value="{{ transaction.recur_date }}" placeholder="ex: The first of the month" />
             </div>
             {{!-- Notes Input --}}
             <div class="form-group">

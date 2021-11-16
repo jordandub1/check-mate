@@ -39,6 +39,11 @@ router.get('/user', async (req, res) => {
         },
       ],
     });
+    
+    //Get user data 
+    const userData = await User.findByPk(req.session.user_id);
+    console.log("THE USER DATA: " + userData)
+    console.log(typeof(userData))
 
     // Serialize data so the template can read it
     const budgets = budgetData.map((budget) => budget.get({ plain: true }));
@@ -47,10 +52,15 @@ router.get('/user', async (req, res) => {
       transaction.get({ plain: true })
     );
 
+    //const user = userData.map((user) => user.get({ plain: true }));
+    const user = userData.get({ plain: true })
+
+
     // Pass serialized data and session flag into template
     res.render('homepage', {
       budgets,
       transactions,
+      user,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
