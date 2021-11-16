@@ -8,9 +8,12 @@
 
                 //get transaction data
                 const donutCanvas = document.getElementById('expense_chart');
-                const donutData = JSON.parse(donutCanvas.getAttribute('transactions'))
+                let donutData = JSON.parse(donutCanvas.getAttribute('transactions'))
+                donutData = donutData.filter((trx) => {
+                    return trx.is_expense;
+                })
 
-                //console.log(donutData)
+                console.log(donutData)
                 
                 // Store the name of each unique category
                 let categories = [];
@@ -28,8 +31,7 @@
                     })
                     //console.log(filteredData);
 
-                    let total = filteredData.reduce(
-                        (accumulator, transaction) => {
+                    let total = filteredData.reduce((accumulator, transaction) => {
                             return accumulator + parseFloat(transaction.amount);     
                         }
                     ,0);
