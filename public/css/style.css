@@ -56,6 +56,11 @@ body {
   padding-bottom: 1.5em;
 }
 
+#card-link:hover {
+  color: black;
+  text-decoration: none;
+}
+
 /* Footer */
 .footer {
   height: 3vh;
