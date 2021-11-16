@@ -48,7 +48,6 @@ async function newIncomeHandler(event) {
   event.preventDefault();
   
   const user_id = (document.querySelector('#transaction-modal')).getAttribute("userInfo");
-  console.log(user_id)
   const tran_name = document.querySelector('#trx_name').value;
   const tran_date = document.querySelector('#trx_date').value;
   const amount = 2000;
