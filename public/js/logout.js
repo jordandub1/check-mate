@@ -52,9 +52,17 @@ async function newIncomeHandler(event) {
   const user_id = (document.querySelector('#transaction-modal')).getAttribute("userInfo");
   const tran_name = document.querySelector('#trx_name').value;
   const tran_date = document.querySelector('#trx_date').value;
-  const amount = document.querySelector('#trx_amount');
+  const amount = document.querySelector('#trx_amount').value;
   const category = document.querySelector('#trx_category').value;
-  const is_expense = true;
+  const is_expense = (value) => {
+    const expense_flag = document.querySelector('#is_exp');
+    if (expense_flag.checked){
+      value = false
+    } else {
+      value = true
+    };
+    return value;
+  };
   const is_recurring = false;
   const recur_date = document.querySelector('#recurring-date').value;
   const notes = document.querySelector('#notes').value;
@@ -88,6 +96,7 @@ async function newIncomeHandler(event) {
 
 };
 
+//Budget Handler
 async function newBudgetHandler(event) {
 
   event.preventDefault();
