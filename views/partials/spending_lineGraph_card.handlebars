@@ -1,0 +1,44 @@
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Changes Over Time</h5>
+        <canvas id = "spending_chart" width="500" height = "300" transactions = "{{stringify transactions}}"></canvas>
+        <script>
+            /* Data Preparation */
+
+            //get transaction data
+            const lineCanvas = document.querySelector('#spending_chart');
+            const lineData = JSON.parse(donutCanvas.getAttribute('transactions'));
+
+            // Get all dates in an array for the x axis.
+            // 
+
+            // Determine how much was spent on each day.
+            //
+
+            /* Graphing */
+            // Setup
+            const labels = ["Jan", "feb", "mar", "apr","may", "June", "July"];
+            const MyData = {
+            labels: labels,
+                datasets: [{
+                    label: 'My First Dataset',
+                    data: [65, 59, 80, 81, 56, 55, 40],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            };
+
+            // Config
+            const MyConfig = {
+                type: 'line',
+                data: MyData,
+                options: {}
+            };
+
+            //Render Chart          
+            const lineChart = new Chart(lineCanvas, MyConfig);
+
+        </script>
+    </div>
+</div>
