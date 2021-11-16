@@ -2,7 +2,7 @@
     {
         "user_id": 1,
         "tran_name": "Rent",
-        "tran_date": "12/01/2021",
+        "tran_date": "2021-11-18",
         "amount": 1000.00,
         "category": "Utilities",
         "is_expense": true,
@@ -13,7 +13,7 @@
     {
         "user_id": 1,
         "tran_name": "Electric",
-        "tran_date": "11/30/2021",
+        "tran_date": "2021-10-18",
         "amount": 125.00,
         "category": "Utilities",
         "is_expense": true,
@@ -24,7 +24,7 @@
     {
         "user_id": 1,
         "tran_name": "Car Payment",
-        "tran_date": "12/05/2021",
+        "tran_date": "2021-11-16",
         "amount": 300.00,
         "category": "Automotive",
         "is_expense": true,
@@ -35,7 +35,7 @@
     {
         "user_id": 1,
         "tran_name": "Health Insurance",
-        "tran_date": "12/01/2021",
+        "tran_date": "2021-11-17",
         "amount": 250.00,
         "category": "Healthcare",
         "is_expense": true,
@@ -46,7 +46,7 @@
     {
         "user_id": 1,
         "tran_name": "Netflix",
-        "tran_date": "12/08/2021",
+        "tran_date": "2021-10-18",
         "amount": 10.00,
         "category": "Entertainment",
         "is_expense": true,
@@ -57,7 +57,7 @@
     {
         "user_id": 1,
         "tran_name": "Hulu",
-        "tran_date": "12/08/2021",
+        "tran_date": "2021-11-19",
         "amount": 8.00,
         "category": "Entertainment",
         "is_expense": true,
@@ -68,7 +68,7 @@
     {
         "user_id": 1,
         "tran_name": "Sling",
-        "tran_date": "12/08/2021",
+        "tran_date": "2021-11-20",
         "amount": 20.00,
         "category": "Entertainment",
         "is_expense": true,
@@ -79,7 +79,7 @@
     {
         "user_id": 1,
         "tran_name": "Disney+",
-        "tran_date": "12/10/2021",
+        "tran_date": "2021-11-16",
         "amount": 8,
         "category": "Entertainment",
         "is_expense": true,
@@ -90,7 +90,7 @@
     {
         "user_id": 1,
         "tran_name": "New Books",
-        "tran_date": "12/20/2021",
+        "tran_date": "2021-11-18",
         "amount": 50,
         "category": "Entertainment",
         "is_expense": true,
@@ -101,7 +101,7 @@
     {
         "user_id": 1,
         "tran_name": "Dinner Date",
-        "tran_date": "12/20/2021",
+        "tran_date": "2021-11-16",
         "amount": 45,
         "category": "Entertainment",
         "is_expense": true,
@@ -112,7 +112,7 @@
     {
         "user_id": 2,
         "tran_name": "Rent",
-        "tran_date": "12/01/2021",
+        "tran_date": "2021-11-15",
         "amount": 1000.00,
         "category": "Utilities",
         "is_expense": true,
@@ -123,7 +123,7 @@
     {
         "user_id": 2,
         "tran_name": "Electric",
-        "tran_date": "11/30/2021",
+        "tran_date": "2021-10-18",
         "amount": 125.00,
         "category": "Utilities",
         "is_expense": true,
@@ -134,7 +134,7 @@
     {
         "user_id": 2,
         "tran_name": "Car Payment",
-        "tran_date": "12/05/2021",
+        "tran_date": "2021-11-16",
         "amount": 300.00,
         "category": "Automotive",
         "is_expense": true,
@@ -145,7 +145,7 @@
     {
         "user_id": 2,
         "tran_name": "Health Insurance",
-        "tran_date": "12/01/2021",
+        "tran_date": "2020-01-16",
         "amount": 250.00,
         "category": "Healthcare",
         "is_expense": true,
@@ -156,7 +156,7 @@
     {
         "user_id": 3,
         "tran_name": "Rent",
-        "tran_date": "12/01/2021",
+        "tran_date": "2021-11-16",
         "amount": 1000.00,
         "category": "Utilities",
         "is_expense": true,
@@ -167,7 +167,7 @@
     {
         "user_id": 3,
         "tran_name": "Electric",
-        "tran_date": "11/30/2021",
+        "tran_date": "2021-10-16",
         "amount": 125.00,
         "category": "Utilities",
         "is_expense": true,
@@ -178,7 +178,7 @@
     {
         "user_id": 3,
         "tran_name": "Car Payment",
-        "tran_date": "12/05/2021",
+        "tran_date": "2021-10-16",
         "amount": 300.00,
         "category": "Automotive",
         "is_expense": true,
@@ -189,7 +189,7 @@
     {
         "user_id": 3,
         "tran_name": "Health Insurance",
-        "tran_date": "12/01/2021",
+        "tran_date": "2021-11-16",
         "amount": 250.00,
         "category": "Healthcare",
         "is_expense": true,
@@ -200,7 +200,7 @@
     {
         "user_id": 4,
         "tran_name": "Rent",
-        "tran_date": "12/01/2021",
+        "tran_date": "2021-11-16",
         "amount": 1000.00,
         "category": "Utilities",
         "is_expense": true,
@@ -211,7 +211,7 @@
     {
         "user_id": 4,
         "tran_name": "Electric",
-        "tran_date": "11/30/2021",
+        "tran_date": "2021-11-16",
         "amount": 125.00,
         "category": "Utilities",
         "is_expense": true,
@@ -222,7 +222,7 @@
     {
         "user_id": 4,
         "tran_name": "Car Payment",
-        "tran_date": "12/05/2021",
+        "tran_date": "2021-11-16",
         "amount": 300.00,
         "category": "Automotive",
         "is_expense": true,
@@ -233,7 +233,7 @@
     {
         "user_id": 4,
         "tran_name": "Health Insurance",
-        "tran_date": "12/01/2021",
+        "tran_date": "2021-11-16",
         "amount": 250.00,
         "category": "Healthcare",
         "is_expense": true,
@@ -244,7 +244,7 @@
     {
         "user_id": 5,
         "tran_name": "Rent",
-        "tran_date": "12/01/2021",
+        "tran_date": "2021-11-16",
         "amount": 1000.00,
         "category": "Utilities",
         "is_expense": true,
@@ -255,18 +255,18 @@
     {
         "user_id": 5,
         "tran_name": "Electric",
-        "tran_date": "11/30/2021",
+        "tran_date": "2021-11-16",
         "amount": 125.00,
         "category": "Utilities",
         "is_expense": true,
         "is_recurring": true,
-        "recur_date": "12/30/2022",
+        "recur_date": "2021-11-16",
         "notes": "Turn off your lights next time"
     },
     {
         "user_id": 5,
         "tran_name": "Car Payment",
-        "tran_date": "12/05/2021",
+        "tran_date": "2021-11-16",
         "amount": 300.00,
         "category": "Automotive",
         "is_expense": true,
@@ -277,7 +277,7 @@
     {
         "user_id": 5,
         "tran_name": "Health Insurance",
-        "tran_date": "12/01/2021",
+        "tran_date": "2021-11-16",
         "amount": 250.00,
         "category": "Healthcare",
         "is_expense": true,
@@ -288,7 +288,7 @@
     {
         "user_id": 5,
         "tran_name": "Bank Error In My Favor",
-        "tran_date": "12/01/2021",
+        "tran_date": "2021-11-16",
         "amount": 2000.00,
         "category": "Healthcare",
         "is_expense": false,
