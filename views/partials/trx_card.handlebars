@@ -5,10 +5,10 @@
       <table>
         <tr>
           <th class='col-md-2 budget-page-header'>Payee</th>
-          <th class='col-md-1 budget-page-header'>Date</th>
+          <th class='col-md-2 budget-page-header'>Date</th>
           <th class='col-md-1 budget-page-header'>Amount</th>
           <th class='col-md-1 budget-page-header'>Category</th>
-          <th class='col-md-3 budget-page-header'>Bill Recurrance</th>
+          <th class='col-md-2 budget-page-header'>Bill Recurrance</th>
           <th class='col-md-4 budget-page-header'>Notes</th>
         </tr>
         {{#each transactions as |transaction|}}
@@ -16,10 +16,10 @@
             {{#if transaction.is_expense}}
               <tr>
                 <td class='col-md-2'>{{transaction.tran_name}}</td>
-                <td class='col-md-1'>{{transaction.tran_date}}</td>
+                <td class='col-md-2'>{{transaction.tran_date}}</td>
                 <td class='col-md-1'>${{transaction.amount}}</td>
                 <td class='col-md-1'>{{transaction.category}}</td>
-                <td class='col-md-3'>{{transaction.recur_date}}</td>
+                <td class='col-md-2'>{{transaction.recur_date}}</td>
                 <td class='col-md-4'>{{transaction.notes}}</td>
 
               </tr>

@@ -134,5 +134,15 @@ a {
 }
 
 .graph-card {
-  width: 560px;
+  height: 580px;
+  display: flex;
+}
+
+#expenses-graph-card {
+  width: 40%;
+}
+
+#spending-graph-card{
+  margin-left: 20px;
+  width: 50%;
 }
