@@ -27,7 +27,7 @@ async function newFormHandler(event) {
     }
   }
 
-document.querySelector('.new-budget-form').addEventListener('submit', newFormHandler);
+document.querySelector('#project-form').addEventListener('submit', newFormHandler);
 
 async function newIncomeHandler(event) {
 
