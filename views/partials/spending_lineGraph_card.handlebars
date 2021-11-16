@@ -7,7 +7,10 @@
 
             //get transaction data
             const lineCanvas = document.querySelector('#spending_chart');
-            const lineData = JSON.parse(donutCanvas.getAttribute('transactions'));
+            let lineData = JSON.parse(donutCanvas.getAttribute('transactions'));
+            lineData = lineData.filter((trx) => {
+                return trx.is_expense
+            })
 
             // Get all dates in an array for the x axis.
             let dates = [];
@@ -21,6 +24,7 @@
             // Determine how much was spent on each day.
             let spendingTotals = dates.map((date) => {
                 let filteredData = lineData.filter((trx) => {
+                    console.log(trx);
                     return trx.tran_date === date;
                 })
                 
