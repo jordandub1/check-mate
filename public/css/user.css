@@ -129,6 +129,10 @@ a {
   margin-bottom: 8px;
 }
 
+.budget-page-header {
+  text-decoration: underline;
+}
+
 .graph-card {
   width: 500px;
 }

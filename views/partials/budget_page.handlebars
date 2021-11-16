@@ -4,13 +4,12 @@
     <br />
     <table>
       <tr>
-        <th class='col-md-1'>Total Income</th>
-        <th class='col-md-1'>Total Remaining</th>
-        <th class='col-md-1'>Total Expense</th>
-        <th class='col-md-1'>Savings Goal Name</th>
-        <th class='col-md-1'>Savings Amount</th>
-        <th class='col-md-1'>Savings Date</th>
-        <th class='col-md-1'>Goal Remaining</th>
+        <th class='col-md-1 budget-page-header'>Total Income</th>
+        <th class='col-md-1 budget-page-header'>Total Remaining</th>
+        <th class='col-md-1 budget-page-header'>Total Expense</th>
+        <th class='col-md-1 budget-page-header'>Savings Goal Name</th>
+        <th class='col-md-1 budget-page-header'>Savings Amount</th>
+        <th class='col-md-1 budget-page-header'>Goal Remaining</th>
       </tr>
       {{#each budgets as |budget|}}
 
@@ -20,7 +19,6 @@
           <td class='col-md-1'>${{budget.total_expense}}</td>
           <td class='col-md-1'>{{budget.savings_goal_name}}</td>
           <td class='col-md-1'>${{budget.savings_amount}}</td>
-          <td class='col-md-1'>{{budget.savings_date}}</td>
           <td class='col-md-1'>${{budget.goal_remain}}</td>
         </tr>
       {{/each}}
