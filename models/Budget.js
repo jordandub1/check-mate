@@ -20,7 +20,7 @@ Budget.init(
     },
     total_income: {
       type: DataTypes.DECIMAL,
-      allowNull: false,
+      allowNull: true,
     },
     total_remain: {
       type: DataTypes.DECIMAL,
