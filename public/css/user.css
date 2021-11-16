@@ -65,6 +65,7 @@ a {
 /* Footer */
 .footer {
   height: 3vh;
+  margin-top: 20px;
 }
 
 #footer-text {
@@ -87,7 +88,8 @@ a {
 
 /* Card Styling */
 .card {
-  box-shadow: 3px 3px 3px gray;
+  box-shadow: 3px 3px 4px gray;
+  border-radius: 10px;
 }
 
 .card-title,
