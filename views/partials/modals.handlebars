@@ -56,6 +56,11 @@
               <label for="trx_name">Name of Transaction (or Income)?</label>
               <input type="text" id="trx_name" class="form-control" value="{{ transaction.tran_name }}" placeholder="ex: New Tires" required/>
             </div>
+            {{!-- Transaction Amount Input --}}
+            <div class="form-group">
+              <label for="trx_amount">Amount of Transaction (or Income)?</label>
+              <input type="text" id="trx_amount" class="form-control" value="{{ transaction.amount }}" placeholder="0.00" required/>
+            </div>
             {{!-- Tran Date Input --}}
             <div class="form-group">
               <label for="trx_date">Date of transaction?</label>
