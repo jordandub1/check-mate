@@ -1,6 +1,6 @@
 <div class='card loan-card'>
   <div class='card-body'>
-    <h5 class='card-title col-md-14'>Monthly Expenses</h5><a href='/transaction-display' id='see-more'>(see all)</a>
+    <h5 class='card-title col-md-14'>Monthly Expenses</h5>
     <table>
       <tr>
         <th class='col-md-2'>Payee</th>
@@ -12,20 +12,22 @@
       </tr>
       {{#each transactions as |transaction|}}
         {{#if transaction.is_recurring}}
-          <tr>
-            <td class='col-md-2'>{{transaction.tran_name}}</td>
-            <td class='col-md-1'>{{transaction.tran_date}}</td>
-            <td class='col-md-1'>${{transaction.amount}}</td>
-            <td class='col-md-1'>{{transaction.category}}</td>
-            <td class='col-md-3'>{{transaction.recur_date}}</td>
-            <td class='col-md-4'>{{transaction.notes}}</td>
-            
-          </tr>
-        {{else}}
+          {{#if transaction.is_expense}}
+            <tr>
+              <td class='col-md-2'>{{transaction.tran_name}}</td>
+              <td class='col-md-1'>{{transaction.tran_date}}</td>
+              <td class='col-md-1'>${{transaction.amount}}</td>
+              <td class='col-md-1'>{{transaction.category}}</td>
+              <td class='col-md-3'>{{transaction.recur_date}}</td>
+              <td class='col-md-4'>{{transaction.notes}}</td>
+
+            </tr>
+          {{else}}
+          {{/if}}
         {{/if}}
       {{/each}}
 
     </table>
   </div>
-
+  <a href='/transaction-display' id='see-more'>(see all)</a>
 </div>

@@ -13,8 +13,17 @@ a {
   color: black;
 }
 
+#card-link:hover {
+  color: black;
+  text-decoration: none;
+}
+
 .navbar-brand {
-  font-size: 24px;
+  font-size: 23px;
+}
+
+#welcome {
+  margin-top: 14px;
 }
 
 @media (min-width: 991.98px) {
@@ -118,4 +127,12 @@ a {
 #see-more {
   margin-right: none;
   margin-bottom: 8px;
+}
+
+.budget-page-header {
+  text-decoration: underline;
+}
+
+.graph-card {
+  width: 500px;
 }
