@@ -54,16 +54,8 @@ async function newIncomeHandler(event) {
   const tran_date = document.querySelector('#trx_date').value;
   const amount = document.querySelector('#trx_amount').value;
   const category = document.querySelector('#trx_category').value;
-  const is_expense = (value) => {
-    const expense_flag = document.querySelector('#is_exp');
-    if (expense_flag.checked){
-      value = false
-    } else {
-      value = true
-    };
-    return value;
-  };
-  const is_recurring = false;
+  const is_expense = document.querySelector('#is_exp').checked;
+  const is_recurring = document.querySelector('#is_req').checked;
   const recur_date = document.querySelector('#recurring-date').value;
   const notes = document.querySelector('#notes').value;
 
