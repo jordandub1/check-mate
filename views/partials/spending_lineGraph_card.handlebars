@@ -9,7 +9,7 @@
             const lineCanvas = document.querySelector('#spending_chart');
             let lineData = JSON.parse(donutCanvas.getAttribute('transactions'));
             lineData = lineData.filter((trx) => {
-                return trx.is_expense
+                return trx.is_expense;
             })
 
             // Get all dates in an array for the x axis.
