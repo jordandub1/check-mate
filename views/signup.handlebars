@@ -1,3 +1,4 @@
+{{! signup page }}
 <section>
   <div class='mask d-flex align-items-center h-100 gradient-custom-3'>
     <div class='container h-100'>
@@ -8,7 +9,7 @@
               <h2 class='text-uppercase text-center mb-5'>Create an account</h2>
 
               <form class='new-user-form'>
-
+                {{! your name }}
                 <div class='form-outline mb-4'>
                   <input
                     type='text'
@@ -17,7 +18,7 @@
                   />
                   <label class='form-label' for='name'>Your Name</label>
                 </div>
-
+                {{! email }}
                 <div class='form-outline mb-4'>
                   <input
                     type='email'
@@ -26,7 +27,7 @@
                   />
                   <label class='form-label' for='email-signup'>Your Email</label>
                 </div>
-
+                {{! password }}
                 <div class='form-outline mb-4'>
                   <input
                     type='password'
@@ -36,12 +37,13 @@
                   <label class='form-label' for='pwd'>Password</label>
                 </div>
                 <div class='d-flex justify-content-center'>
+                  {{! submit button }}
                   <button
                     type='submit'
                     class='btn btn-primary btn-block btn-lg gradient-custom-4 text-body'
                   >Register</button>
                 </div>
-
+                {{! login link }}
                 <p class='text-center text-muted mt-5 mb-0'>Already have an
                   account?
                   <a href='/' class='fw-bold text-body'><u>Login here</u></a></p>

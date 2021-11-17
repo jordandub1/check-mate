@@ -1,9 +1,31 @@
-<div class="card">
-    <div class="card-body">
-        <h5 class="card-title">Total Spending By Day</h5>
-        <canvas id = "spending_chart" width="500" height = "300" transactions = "{{stringify transactions}}"></canvas>
-        <script>
-            /* Data Preparation */
+<div class='card'>
+  <div class='card-body'>
+    <h5 class='card-title'>Total Spending By Day</h5>
+    <canvas
+      id='spending_chart'
+      width='500'
+      height='300'
+      transactions='{{stringify transactions}}'
+    ></canvas>
+    <script>
+      /* Data Preparation */ //get transaction data const lineCanvas =
+      document.querySelector('#spending_chart'); let lineData =
+      JSON.parse(donutCanvas.getAttribute('transactions')); lineData =
+      lineData.filter((trx) => { return trx.is_expense }) // Get all dates in an
+      array for the x axis. let dates = []; for(let i = 0; i < lineData.length;
+      i++) { if(!dates.includes(lineData[i].tran_date)) {
+      dates.push(lineData[i].tran_date); } } dates.sort() // Determine how much
+      was spent on each day. let spendingTotals = dates.map((date) => { let
+      filteredData = lineData.filter((trx) => { console.log(trx); return
+      trx.tran_date === date; }) let totals = filteredData.reduce((acc, trx) =>
+      { return acc + parseFloat(trx.amount); } ,0) return {x: date, y: totals};
+      }) /* Graphing */ // Setup const labels = dates; const MyData = { labels:
+      labels, datasets: [{ label: 'My First Dataset', data: spendingTotals,
+      fill: false, borderColor: 'rgb(75, 192, 192)', tension: 0.1 }] }; //
+      Config const MyConfig = { type: 'line', data: MyData, options: { scales: {
+      xAxes: { type: 'timeseries', distribution: 'linear', time: { unit: 'day' }
+      }, yAxes: { beginAtZero: true } }, plugins: { legend: { display: false } }
+      } }; //Render Chart const lineChart = new Chart(lineCanvas, MyConfig);
 
             //get transaction data
             const lineCanvas = document.querySelector('#spending_chart');

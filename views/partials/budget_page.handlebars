@@ -1,3 +1,4 @@
+{{!-- budget page information --}}
 <div class='card loan-card'>
   <div class='card-body'>
     <h5 class='card-title'>Budget for {{user.name}}</h5>
@@ -9,17 +10,17 @@
         <th class='col-md-1 budget-page-header'>Total Expense</th>
         <th class='col-md-1 budget-page-header'>Savings Goal Name</th>
         <th class='col-md-1 budget-page-header'>Savings Amount</th>
-        <th class='col-md-1 budget-page-header'>Goal Remaining</th>
+        <th class='col-md-1 budget-page-header'>Savings Goal Date</th>
       </tr>
       {{#each budgets as |budget|}}
 
         <tr>
           <td class='col-md-1'>${{budget.total_income}}</td>
           <td class='col-md-1'>${{budget.total_remain}}</td>
-          <td class='col-md-1'>${{budget.total_expense}}</td>
+          <td class='col-md-1'>$1200</td>
           <td class='col-md-1'>{{budget.savings_goal_name}}</td>
           <td class='col-md-1'>${{budget.savings_amount}}</td>
-          <td class='col-md-1'>${{budget.goal_remain}}</td>
+          <td class='col-md-1'>{{budget.savings_date}}</td>
         </tr>
       {{/each}}
 
@@ -27,6 +28,12 @@
   </div>
 </div>
 <br>
+{{!-- graphs --}}
 <div class='graph-card'>
-  {{>expenses_graph_card}}
+  <div id="expenses-graph-card">{{>expenses_graph_card}}</div>
+  <div id="spending-graph-card">{{>spending_lineGraph_card}}</div>
 </div>
+<br>
+<br>
+<br>
+

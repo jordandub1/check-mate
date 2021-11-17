@@ -1,3 +1,4 @@
+{{! Login page }}
 <section>
   <div class='mask d-flex align-items-center h-100 gradient-custom-3'>
     <div class='container h-100'>
@@ -8,7 +9,7 @@
               <h2 class='text-uppercase text-center mb-5'>Login To Your Account</h2>
 
               <form class='form login-form'>
-
+                {{! email address }}
                 <div class='form-outline mb-4'>
                   <input
                     type='text'
@@ -17,7 +18,7 @@
                   />
                   <label class='form-label' for='uname'>Email Address</label>
                 </div>
-
+                {{! password }}
                 <div class='form-outline mb-4'>
                   <input
                     type='password'
@@ -26,14 +27,14 @@
                   />
                   <label class='form-label' for='password'>Password</label>
                 </div>
-
+                {{! submit }}
                 <div class='d-flex justify-content-center'>
                   <button
                     type='submit'
                     class='btn btn-primary btn-block btn-lg gradient-custom-4 text-body'
                   >Log In</button>
                 </div>
-
+                {{! register link }}
                 <p class='text-center text-muted mt-5 mb-0'>Don't have an
                   account?
                   <a href='/signup' class='fw-bold text-body'><u>Register here</u></a></p>
