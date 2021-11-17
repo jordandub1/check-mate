@@ -11,6 +11,8 @@ The application uses node.js, express.js, mySQL, and Sequelize to keep track of 
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Application Screenshot](#application-screenshot)
+- [Deployed Application](#deployed-application)
 - [Credits](#credits)
 - [License](#license)
 
@@ -38,6 +40,13 @@ Finally, use the command 'npm start' to run the program.
 Users must register to use the program by selecting 'Register Here' on the login page. After registering, users can login in a view their budget and transaction data. Budgets can be set on the left via 'Edit Budget'; income and expenses can be added similarly via 'Add Income or Expense'. Adding budgets and expenses will update the cards in the center of the application: the donut chart will reflect the amount spent in various categories, the line chart will show how much was spent each day, and the monthly expenses table will show details on that months expenses.
 
 Details about all transactions and budget info can be seen by selecting 'Budget Page' and 'Transaction Page' on the left.
+
+## Application-Screenshot
+
+![Check-Mate](/public/images/screenshot.png)
+
+## Deployed-Application
+ https://check-mate-finance-tool.herokuapp.com/
 
 ## Credits
 
