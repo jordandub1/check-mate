@@ -1,70 +1,34 @@
-<div class="card">
-    <div class="card-body">
-        <h5 class="card-title">Expense Breakdown</h5>
-        <p class="card-text">
-            <canvas id="expense_chart" width="6000" height="4000" transactions = "{{stringify transactions}}"></canvas>
-            <script>
-                /* Data Preparation */
-
-                //get transaction data
-                const donutCanvas = document.getElementById('expense_chart');
-                let donutData = JSON.parse(donutCanvas.getAttribute('transactions'))
-                donutData = donutData.filter((trx) => {
-                    return trx.is_expense;
-                })
-
-                console.log(donutData)
-                
-                // Store the name of each unique category
-                let categories = [];
-                for(let i = 0; i < donutData.length; i++) {
-                    if(!categories.includes(donutData[i].category)) {
-                        categories.push(donutData[i].category)
-                    }
-                }
-                //console.log(categories)
-
-                //Determine how much was spent in each category
-                let expenseTotals = categories.map((category) => {
-                    let filteredData = donutData.filter((trx) => {
-                        return trx.category === category;
-                    })
-                    //console.log(filteredData);
-
-                    let total = filteredData.reduce((accumulator, transaction) => {
-                            return accumulator + parseFloat(transaction.amount);     
-                        }
-                    ,0);
-                    //console.log(total);
-                    return total;
-                })
-                //console.log(expenseTotals)
-
-
-                /* Graphing */
-                // Setup
-                const data = {
-                    labels: categories,
-                    datasets: [{
-                        label: '',
-                        data: expenseTotals,
-                        backgroundColor: [
-                            "red", "blue", "green", "orange", "purple", "yellow", "black"
-                        ],
-                        hoverOffset: 4
-                    }]
-                };
-
-                // Config
-                const config = {
-                    type: 'doughnut',
-                    data: data,
-                    options: {}
-                };
-
-                // Render chart
-                const myChart = new Chart(donutCanvas, config);
-            </script>
-        </p>
-    </div>
+<div class='card'>
+  <div class='card-body'>
+    <h5 class='card-title'>Expense Breakdown</h5>
+    <p class='card-text'>
+      <canvas
+        id='expense_chart'
+        width='6000'
+        height='4000'
+        transactions='{{stringify transactions}}'
+      ></canvas>
+      <script>
+        /* Data Preparation */ //get transaction data const donutCanvas =
+        document.getElementById('expense_chart'); let donutData =
+        JSON.parse(donutCanvas.getAttribute('transactions')) donutData =
+        donutData.filter((trx) => { return trx.is_expense; })
+        console.log(donutData) // Store the name of each unique category let
+        categories = []; for(let i = 0; i < donutData.length; i++) {
+        if(!categories.includes(donutData[i].category)) {
+        categories.push(donutData[i].category) } } //console.log(categories)
+        //Determine how much was spent in each category let expenseTotals =
+        categories.map((category) => { let filteredData = donutData.filter((trx)
+        => { return trx.category === category; }) //console.log(filteredData);
+        let total = filteredData.reduce((accumulator, transaction) => { return
+        accumulator + parseFloat(transaction.amount); } ,0);
+        //console.log(total); return total; }) //console.log(expenseTotals) /*
+        Graphing */ // Setup const data = { labels: categories, datasets: [{
+        label: '', data: expenseTotals, backgroundColor: [ "red", "blue",
+        "green", "orange", "purple", "yellow", "black" ], hoverOffset: 4 }] };
+        // Config const config = { type: 'doughnut', data: data, options: {} };
+        // Render chart const myChart = new Chart(donutCanvas, config);
+      </script>
+    </p>
+  </div>
 </div>

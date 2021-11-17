@@ -5,7 +5,7 @@ const withAuth = require('../utils/auth');
 /* home-routes: Includes all routes that are not api calls. */
 
 // GET all user information and associated budget data.
-// TODO: Only get info of the one user that's logged in!
+// Only get info of the one user that's logged in!
 router.get('/user', async (req, res) => {
   try {
     //redirect to login page if user is not logged in

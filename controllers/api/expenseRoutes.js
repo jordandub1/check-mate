@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { Expense, Category, Budget } = require('../../models');
 
-
 // Get all expenses
 router.get('/', async (req, res) => {
   try {

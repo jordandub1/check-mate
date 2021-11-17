@@ -9,6 +9,7 @@ body {
   text-align: center;
 }
 
+/* links */
 a {
   color: black;
 }
@@ -18,6 +19,7 @@ a {
   text-decoration: none;
 }
 
+/* nav bar */
 .navbar-brand {
   font-size: 23px;
 }
@@ -142,7 +144,7 @@ a {
   width: 40%;
 }
 
-#spending-graph-card{
+#spending-graph-card {
   margin-left: 20px;
   width: 50%;
 }
