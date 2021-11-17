@@ -1,3 +1,4 @@
+{{!-- Edit Budget Modal --}}
 <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -8,16 +9,17 @@
         </div>
         <form id="project-form"  userInfo2 = "{{user.id}}">
           <div class="modal-body">
+            {{!-- Monthly Income --}}
             <div class="form-group">
               <label for="total_income">Monthly Income</label>
               <input type="text" id="total_income" class="form-control" value="{{ budget.total_income }}" placeholder="$0.00" required/>
             </div>
-
+            {{!-- current balance --}}
             <div class="form-group">
               <label for="total_remain">What is Your Current Balance?</label>
               <input type="text" id="total_remain" class="form-control" value="{{ budget.total_remain }}" placeholder="$0.00" required/>
             </div>
-
+            {{!-- savings goal --}}
             <div class="form-group">
               <label for="savings-name">Enter the name of your savings goal:</label>
               <input type="text" id="savings-name" class="form-control" value="{{ budget.savings_goal_name }}" placeholder="ex: New Car Down Payment" required/>
@@ -30,7 +32,6 @@
               <label for="savings-date">When do you want to meet your savings goal?</label>
               <input type="date" id="savings-date" class="form-control" value="{{ budget.savings_date }}" placeholder="YYYY-MM-DD" required/>
             </div>
-    
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

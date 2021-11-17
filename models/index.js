@@ -17,7 +17,7 @@ Transaction.belongsTo(User, {
 });
 
 Budget.belongsTo(User, {
-  foreignKey: 'user_id'
-})
+  foreignKey: 'user_id',
+});
 
-module.exports = { User, Transaction, Budget};
+module.exports = { User, Transaction, Budget };

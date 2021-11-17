@@ -56,11 +56,6 @@ body {
   padding-bottom: 1.5em;
 }
 
-#card-link:hover {
-  color: black;
-  text-decoration: none;
-}
-
 /* Footer */
 .footer {
   height: 3vh;
@@ -101,4 +96,10 @@ body {
   flex-wrap: wrap;
   margin-right: 0px;
   margin-left: -15px;
+}
+
+/* card link */
+#card-link:hover {
+  color: black;
+  text-decoration: none;
 }

@@ -5,7 +5,6 @@ const categoryRoutes = require('./categoryRoutes');
 const transactionRoutes = require('./transactionRoutes');
 const budgetRoutes = require('./budgetRoutes');
 
-// router.use('/user', userRoutes);
 router.use('/expense', expenseRoutes);
 router.use('/category', categoryRoutes);
 router.use('/transaction', transactionRoutes);

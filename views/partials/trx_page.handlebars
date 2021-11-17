@@ -1,3 +1,4 @@
+{{! transaction page }}
 <div class='card loan-card'>
   <div class='card-body'>
     <h5 class='card-title col-md-12'>Check Register for {{user.name}}</h5>
@@ -12,6 +13,7 @@
         <th class='col-md-2 budget-page-header'>Recurring Schedule</th>
         <th class='col-md-2 budget-page-header'>Notes</th>
       </tr>
+      {{! data pulled from transaction table }}
       {{#each transactions as |transaction|}}
 
         <tr>

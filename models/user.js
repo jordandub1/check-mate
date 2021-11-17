@@ -1,4 +1,4 @@
-//TODO: Add Following to Model: id, username, password, email, budget, income, remaining, savings_goal
+//User Model
 
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
